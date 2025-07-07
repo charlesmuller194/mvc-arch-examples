@@ -1,4 +1,4 @@
-# 🧠 Exemplos de Projeto ToDo com Padrão MVC
+# Exemplos de Projeto ToDo com Padrão MVC
 
 Este repositório contém dois projetos didáticos simples que implementam o padrão arquitetural **MVC (Model-View-Controller)** com o objetivo de demonstrar a separação de responsabilidades e a estrutura modular em diferentes linguagens: **Java** e **JavaScript**.
 
@@ -24,9 +24,9 @@ mvc-tasks-example/
 
 ---
 
-## 🟨 Projeto JavaScript: Tasks com e sem MVC
+## Projeto JavaScript: Tasks com e sem MVC
 
-📁 Caminho: `mvc-with-without/`
+Caminho: `mvc-with-without/`
 
 ### 🔹 `with_mvc/`
 Aplicação de lista de tarefas estruturada em três arquivos:
@@ -38,14 +38,14 @@ Aplicação de lista de tarefas estruturada em três arquivos:
 ### 🔸 `without_mvc/`
 Versão equivalente, mas com código acoplado e sem separação de responsabilidades. Serve para comparação com a versão MVC.
 
-### 🚀 Como executar:
+### Como executar:
 Abra o `index.html` ou `without_mvc_example.html` diretamente no navegador ou com Live Server no VS Code.
 
 ---
 
-## ☕ Projeto Java (Console): Tasks com MVC
+## Projeto Java (Console): Tasks com MVC
 
-📁 Caminho: `src/main/java/github/lucasmartins/classes/`
+Caminho: `src/main/java/github/lucasmartins/classes/`
 
 - `TasksModel.java` — lógica de dados
 - `TasksView.java` — interação com o usuário via console
@@ -53,7 +53,7 @@ Abra o `index.html` ou `without_mvc_example.html` diretamente no navegador ou co
 - `Main.java` — ponto de entrada
 - Empacotado como projeto Maven
 
-### ▶️ Como executar com Maven:
+### Como executar com Maven:
 
 1. No terminal:
 ```bash
