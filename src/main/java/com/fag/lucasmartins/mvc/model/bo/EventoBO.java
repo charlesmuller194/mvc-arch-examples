@@ -10,7 +10,11 @@ public class EventoBO {
 
     private Integer ingressosVendidos;
 
+    public EventoBO() {
+    }
+
     public EventoBO(Long id, String nome, Integer capacidadeMaxima) {
+        this.id = id;
         this.nome = nome;
         this.capacidadeMaxima = capacidadeMaxima;
         this.ingressosVendidos = 0;

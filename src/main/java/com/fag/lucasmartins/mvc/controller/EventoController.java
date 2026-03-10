@@ -2,9 +2,9 @@ package com.fag.lucasmartins.mvc.controller;
 
 
 import com.fag.lucasmartins.mvc.controller.mapper.EventoDTOMapper;
+import com.fag.lucasmartins.mvc.view.dto.EventoDTO;
 import com.fag.lucasmartins.mvc.model.bo.EventoBO;
 import com.fag.lucasmartins.mvc.model.service.EventoService;
-import com.fag.lucasmartins.mvc.view.dto.EventoDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

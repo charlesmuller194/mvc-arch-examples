@@ -1,9 +1,10 @@
 package com.fag.lucasmartins.mvc.model.repository.impl;
 
 import com.fag.lucasmartins.mvc.model.bo.EventoBO;
-import com.fag.lucasmartins.mvc.model.repository.entity.EventoEntity;
 import com.fag.lucasmartins.mvc.model.repository.EventoRepository;
+import com.fag.lucasmartins.mvc.model.repository.entity.EventoEntity;
 import com.fag.lucasmartins.mvc.model.repository.jpa.EventoJpaRepository;
+import com.fag.lucasmartins.mvc.model.repository.mapper.EventoEntityMapper;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -19,11 +20,11 @@ public class EventoRepositoryImpl implements EventoRepository {
 
     @Override
     public EventoBO salvar(EventoBO bo) {
-        EventoEntity entity = new EventoEntity(bo.getId(), bo.getNome(), bo.getCapacidadeMaxima(), bo.getIngressosVendidos());
+        EventoEntity entity = EventoEntityMapper.toEntity(bo);
 
         EventoEntity eventoCriado = jpaRepository.save(entity);
 
-        return new EventoBO(eventoCriado.getId(), eventoCriado.getNome(), eventoCriado.getCapacidadeMaxima(), eventoCriado.getIngressosVendidos());
+        return EventoEntityMapper.toBo(eventoCriado);
     }
 
     @Override
@@ -34,6 +35,6 @@ public class EventoRepositoryImpl implements EventoRepository {
             throw new IllegalArgumentException("Evento não encontrado!");
         }
 
-        return new EventoBO(evento.get().getId(), evento.get().getNome(), evento.get().getCapacidadeMaxima(), evento.get().getIngressosVendidos());
+        return EventoEntityMapper.toBo(evento.get());
     }
 }
